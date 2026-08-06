@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.app__header {
+  margin-bottom: var(--space-lg);
+}
+
+.app__header h1 {
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary-dark);
+}
+
+.app__header p {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-lg);
+}
+
+.filter-bar__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.filter-bar select {
+  font-size: 1rem;
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* Grid */
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-lg);
+}
+
+.plant-grid__empty {
+  color: var(--color-text-muted);
+}
+
+/* Card */
+.plant-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.plant-card:hover,
+.plant-card:focus-visible {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.plant-card__body {
+  padding: var(--space-md);
+}
+
+.plant-card__name {
+  margin: 0 0 var(--space-xs);
+  font-size: 1.05rem;
+}
+
+.plant-card__latin {
+  margin: 0 0 var(--space-xs);
+  font-style: italic;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.plant-card__type {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+.plant-card__scores {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* Plant image / placeholder */
+.plant-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: var(--color-border);
+}
+
+.plant-image--placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.plant-image--placeholder span:first-child {
+  font-size: 2rem;
+}
+
+/* Score pill */
+.score-pill {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 2px var(--space-sm);
+}
+
+.score-pill__label {
+  color: var(--color-text-muted);
+}
+
+.score-pill__value {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+/* Detail overlay */
+.plant-detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  z-index: 10;
+}
+
+.plant-detail {
+  position: relative;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.plant-detail__close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+.plant-detail__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.plant-detail__body {
+  padding: var(--space-lg);
+}
+
+.plant-detail__latin {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-top: 0;
+}
+
+.plant-detail__scores {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.plant-detail__scores .score-pill {
+  flex: 1;
+}
+
+.plant-detail__facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-xs) var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.plant-detail__facts dt {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.plant-detail__facts dd {
+  margin: 0;
+  font-size: 0.85rem;
+}
