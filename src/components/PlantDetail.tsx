@@ -36,8 +36,11 @@ export function PlantDetail({ plant, onClose }: PlantDetailProps) {
           <p className="plant-detail__latin">{plant.latinName}</p>
 
           <div className="plant-detail__scores">
-            <ScorePill label="Fire resistance" score={plant.fireResistanceScore} />
-            <ScorePill label="Pollinator" score={plant.pollinatorScore} />
+            <ScorePill label="Ease of care" value={plant.easeOfCare ?? "Not yet rated"} />
+            <ScorePill
+              label="Pollinator"
+              value={plant.pollinatorScore === null ? "Not yet rated" : `${plant.pollinatorScore} / 5`}
+            />
           </div>
 
           <p>{plant.description}</p>

@@ -22,17 +22,12 @@ function App() {
       result = result.filter((p) => p.type === selectedType);
     }
 
-    const withScoreFirst = (a: Plant, b: Plant, key: "fireResistanceScore" | "pollinatorScore") => {
-      if (a[key] === null && b[key] === null) return 0;
-      if (a[key] === null) return 1;
-      if (b[key] === null) return -1;
-      return b[key]! - a[key]!;
-    };
-
     return [...result].sort((a, b) => {
       if (sortKey === "name") return a.commonName.localeCompare(b.commonName);
-      if (sortKey === "fireResistance") return withScoreFirst(a, b, "fireResistanceScore");
-      return withScoreFirst(a, b, "pollinatorScore");
+      if (a.pollinatorScore === null && b.pollinatorScore === null) return 0;
+      if (a.pollinatorScore === null) return 1;
+      if (b.pollinatorScore === null) return -1;
+      return b.pollinatorScore - a.pollinatorScore;
     });
   }, [selectedType, sortKey]);
 

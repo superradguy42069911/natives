@@ -1,4 +1,4 @@
-export type SortKey = "name" | "fireResistance" | "pollinator";
+export type SortKey = "name" | "pollinator";
 
 interface FilterBarProps {
   types: string[];
@@ -27,7 +27,6 @@ export function FilterBar({ types, selectedType, onTypeChange, sortKey, onSortCh
         Sort by
         <select value={sortKey} onChange={(e) => onSortChange(e.target.value as SortKey)}>
           <option value="name">Name</option>
-          <option value="fireResistance">Fire resistance score</option>
           <option value="pollinator">Pollinator score</option>
         </select>
       </label>

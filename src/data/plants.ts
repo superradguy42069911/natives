@@ -6,8 +6,13 @@ export interface Plant {
   size: string;
   sunNeeds: string;
   waterNeeds: string;
-  // Scale TBD - Isaac to specify. Null means not yet scored.
-  fireResistanceScore: number | null;
+  // Ease of care as rated by calscape.org (values seen: "Easy", "Moderate").
+  // Null means Calscape doesn't show this field for the plant.
+  easeOfCare: string | null;
+  // Pollinator score 1-5: quintile rank of each plant's total Calscape
+  // "Confirmed + Likely" pollinator species count among these 20 plants
+  // (bottom 4 by count = 1, ... top 4 by count = 5). Source: calscape.org
+  // per-plant "Wildlife Value" data, checked 2026-08-12.
   pollinatorScore: number | null;
   bloomSeason: string;
   bloomColor: string;
@@ -17,9 +22,12 @@ export interface Plant {
 }
 
 // Preliminary reference data (habit, size, sun/water needs, bloom info) based on
-// general horticultural knowledge of these species. Isaac will supply the
-// authoritative plant data, descriptions, and fire resistance / pollinator
-// scores later - this is scaffolding content only.
+// general horticultural knowledge of these species. Photos, ease-of-care, and
+// pollinator scores are sourced from calscape.org (see field comments above
+// for methodology). A fire resistance field was considered but dropped:
+// credible sources (CAL FIRE-adjacent agencies, UC ANR, fire departments)
+// gave conflicting flammability ratings for several of these plants, so a
+// single score would have fabricated false precision.
 export const plants: Plant[] = [
   {
     id: "coast-live-oak",
@@ -29,8 +37,8 @@ export const plants: Plant[] = [
     size: "30-70 ft tall, wide spreading canopy",
     sunNeeds: "Full sun",
     waterNeeds: "Low (once established)",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 5,
     bloomSeason: "Spring",
     bloomColor: "Yellow-green catkins (inconspicuous)",
     description: "Evergreen oak with a broad, rounded canopy; a keystone species in Southern California woodlands. Its acorns feed a wide range of wildlife, and mature trees can live for centuries.",
@@ -45,8 +53,8 @@ export const plants: Plant[] = [
     size: "6-15 ft tall",
     sunNeeds: "Full sun to part shade",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 2,
     bloomSeason: "Summer",
     bloomColor: "White flowers, red winter berries",
     description: "Evergreen shrub known for bright red winter berries that attract birds; also called California Holly. It's a common chaparral and woodland understory plant across coastal Southern California.",
@@ -61,8 +69,8 @@ export const plants: Plant[] = [
     size: "1-3 ft tall, spreading",
     sunNeeds: "Full sun",
     waterNeeds: "Very low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 3,
     bloomSeason: "Spring to summer",
     bloomColor: "Yellow",
     description: "Flat-padded cactus with showy yellow flowers and edible fruit (tuna); common on coastal bluffs and scrub. Its pads and fruit have long been used as a food source by local Indigenous communities.",
@@ -77,8 +85,8 @@ export const plants: Plant[] = [
     size: "8-24 in tall",
     sunNeeds: "Full sun",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 3,
     bloomSeason: "Spring",
     bloomColor: "Orange",
     description: "California's state flower; a low-growing wildflower with silky orange petals, self-seeds readily. Flowers close at night and on overcast days, reopening in full sun.",
@@ -93,8 +101,8 @@ export const plants: Plant[] = [
     size: "4-8 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 1,
     bloomSeason: "Late spring to summer",
     bloomColor: "White with a yellow center (\"fried egg\" flower)",
     description: "Tall perennial with large, crepe-paper-like white flowers; spreads by rhizomes once established. It's often found along dry washes and can form large colonies over time.",
@@ -109,8 +117,8 @@ export const plants: Plant[] = [
     size: "2-3 ft (groundcover form) to 6-12 ft (shrub form)",
     sunNeeds: "Full sun",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 4,
     bloomSeason: "Fall",
     bloomColor: "White/cream",
     description: "Fast-growing evergreen shrub, available in both spreading groundcover and upright shrub forms. It's one of the first native shrubs to colonize disturbed ground, making it a common restoration plant.",
@@ -125,8 +133,8 @@ export const plants: Plant[] = [
     size: "3-12 ft tall (varies by species)",
     sunNeeds: "Full sun to part shade",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: null,
+    pollinatorScore: 5,
     bloomSeason: "Spring",
     bloomColor: "Blue / purple",
     description: "Genus of evergreen shrubs known for masses of blue flowers in spring; a major pollinator draw. Dozens of California species and cultivars exist, ranging from low groundcovers to large shrubs.",
@@ -141,8 +149,8 @@ export const plants: Plant[] = [
     size: "3-5 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Very low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 4,
     bloomSeason: "Late spring to summer",
     bloomColor: "White",
     description: "Aromatic silvery-leaved shrub, culturally significant to local Indigenous communities. Its thick, wand-like flower stalks can reach several feet tall and draw large numbers of native bees.",
@@ -157,8 +165,8 @@ export const plants: Plant[] = [
     size: "2-5 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 2,
     bloomSeason: "Fall",
     bloomColor: "Inconspicuous yellow-green",
     description: "Soft, feathery gray-green foliage with a strong sage scent; a foundational coastal sage scrub species. Despite the common name, it's an artemisia, not a true sage (Salvia).",
@@ -173,8 +181,8 @@ export const plants: Plant[] = [
     size: "10-20 ft tall",
     sunNeeds: "Full sun to part shade",
     waterNeeds: "Moderate",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: null,
+    pollinatorScore: 3,
     bloomSeason: "Spring to summer",
     bloomColor: "White/cream flowers, blue-purple berries",
     description: "Fast-growing large shrub with flat-topped flower clusters and clusters of powdery-blue berries. The berries are a favorite of many bird species, though raw, unripe fruit and other plant parts are toxic.",
@@ -189,8 +197,8 @@ export const plants: Plant[] = [
     size: "40-80 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Moderate (streamside species)",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 1,
     bloomSeason: "Spring",
     bloomColor: "Red/yellow catkins (inconspicuous)",
     description: "Large deciduous tree with mottled, peeling bark; typically found along streams and washes. It's one of Southern California's largest native trees, providing key riparian shade and habitat.",
@@ -205,8 +213,8 @@ export const plants: Plant[] = [
     size: "2-4 ft tall",
     sunNeeds: "Full sun to part shade",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: null,
+    pollinatorScore: 2,
     bloomSeason: "Spring to summer",
     bloomColor: "Orange",
     description: "Small evergreen shrub with sticky leaves and tubular orange flowers, blooms nearly year-round in mild years. It's a reliable nectar source for hummingbirds and adapts well to a range of garden conditions.",
@@ -221,8 +229,8 @@ export const plants: Plant[] = [
     size: "1-3 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 3,
     bloomSeason: "Late summer to fall",
     bloomColor: "Red/orange",
     description: "Spreading perennial with tubular red-orange flowers that bloom late in the season, a key hummingbird plant. It dies back in winter and returns from its roots each year.",
@@ -237,8 +245,8 @@ export const plants: Plant[] = [
     size: "1-3 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Very low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 5,
     bloomSeason: "Spring to fall",
     bloomColor: "White/pink",
     description: "Long-blooming subshrub with clusters of small flowers; one of the most valuable native pollinator plants. Flowers shift from white to rust-colored as they age, giving mature plants a two-tone look.",
@@ -253,8 +261,8 @@ export const plants: Plant[] = [
     size: "3-6 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 5,
     bloomSeason: "Spring",
     bloomColor: "Pale blue / lavender",
     description: "Aromatic shrub with whorled flower spikes; a signature scent and sound (bee activity) of coastal sage scrub. It's one of the most drought-tolerant native sages, thriving with little to no summer water.",
@@ -269,8 +277,8 @@ export const plants: Plant[] = [
     size: "6-18 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Very low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Moderate",
+    pollinatorScore: 4,
     bloomSeason: "Winter to spring",
     bloomColor: "Pink/white, urn-shaped",
     description: "Iconic chaparral shrub with smooth mahogany-red bark and clusters of urn-shaped flowers. Its early-season blooms are an important nectar source for native bees before most other chaparral plants flower.",
@@ -285,8 +293,8 @@ export const plants: Plant[] = [
     size: "10-20 ft tall",
     sunNeeds: "Full sun to part shade",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 2,
     bloomSeason: "Early spring (before leaf-out)",
     bloomColor: "Magenta / pink",
     description: "Deciduous small tree covered in bright magenta pea-like flowers in early spring, before leaves emerge. Heart-shaped leaves follow the bloom, turning yellow to red in fall.",
@@ -301,8 +309,8 @@ export const plants: Plant[] = [
     size: "2-4 ft tall, wide clump",
     sunNeeds: "Full sun to part shade",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 1,
     bloomSeason: "Summer to fall (seed plumes)",
     bloomColor: "Tan/beige plumes",
     description: "Large, fountain-shaped native bunchgrass; a low-maintenance structural anchor for native gardens. It was traditionally used by local Indigenous communities for basket weaving.",
@@ -317,8 +325,8 @@ export const plants: Plant[] = [
     size: "1-2 ft tall",
     sunNeeds: "Part shade to full sun",
     waterNeeds: "Low to moderate",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 4,
     bloomSeason: "Spring",
     bloomColor: "Magenta / rose",
     description: "Shade-tolerant, spreading sage with fragrant leaves and tall magenta flower spikes favored by hummingbirds. It spreads by rhizomes and makes an effective groundcover under oaks and other trees.",
@@ -333,8 +341,8 @@ export const plants: Plant[] = [
     size: "6-15 ft tall",
     sunNeeds: "Full sun",
     waterNeeds: "Low",
-    fireResistanceScore: null,
-    pollinatorScore: null,
+    easeOfCare: "Easy",
+    pollinatorScore: 1,
     bloomSeason: "Late spring to summer",
     bloomColor: "White/cream",
     description: "Large, glossy-leaved evergreen shrub with folded, taco-shaped leaves; a signature coastal sage scrub species. It's frost-sensitive, so its distribution roughly tracks the coastal areas least prone to hard freezes.",
