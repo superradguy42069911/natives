@@ -34,7 +34,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring",
     bloomColor: "Yellow-green catkins (inconspicuous)",
     description: "Evergreen oak with a broad, rounded canopy; a keystone species in Southern California woodlands. Its acorns feed a wide range of wildlife, and mature trees can live for centuries.",
-    imageUrl: "",
+    imageUrl: "/images/coast-live-oak.jpg",
     imageAlt: "Coast Live Oak",
   },
   {
@@ -50,7 +50,7 @@ export const plants: Plant[] = [
     bloomSeason: "Summer",
     bloomColor: "White flowers, red winter berries",
     description: "Evergreen shrub known for bright red winter berries that attract birds; also called California Holly. It's a common chaparral and woodland understory plant across coastal Southern California.",
-    imageUrl: "",
+    imageUrl: "/images/toyon.jpg",
     imageAlt: "Toyon",
   },
   {
@@ -66,7 +66,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring to summer",
     bloomColor: "Yellow",
     description: "Flat-padded cactus with showy yellow flowers and edible fruit (tuna); common on coastal bluffs and scrub. Its pads and fruit have long been used as a food source by local Indigenous communities.",
-    imageUrl: "",
+    imageUrl: "/images/prickly-pear.jpg",
     imageAlt: "Prickly Pear",
   },
   {
@@ -82,7 +82,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring",
     bloomColor: "Orange",
     description: "California's state flower; a low-growing wildflower with silky orange petals, self-seeds readily. Flowers close at night and on overcast days, reopening in full sun.",
-    imageUrl: "",
+    imageUrl: "/images/california-poppy.jpg",
     imageAlt: "California Poppy",
   },
   {
@@ -98,7 +98,7 @@ export const plants: Plant[] = [
     bloomSeason: "Late spring to summer",
     bloomColor: "White with a yellow center (\"fried egg\" flower)",
     description: "Tall perennial with large, crepe-paper-like white flowers; spreads by rhizomes once established. It's often found along dry washes and can form large colonies over time.",
-    imageUrl: "",
+    imageUrl: "/images/matilija-poppy.jpg",
     imageAlt: "Matilija Poppy",
   },
   {
@@ -114,7 +114,7 @@ export const plants: Plant[] = [
     bloomSeason: "Fall",
     bloomColor: "White/cream",
     description: "Fast-growing evergreen shrub, available in both spreading groundcover and upright shrub forms. It's one of the first native shrubs to colonize disturbed ground, making it a common restoration plant.",
-    imageUrl: "",
+    imageUrl: "/images/coyote-brush.jpg",
     imageAlt: "Coyote Brush",
   },
   {
@@ -130,7 +130,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring",
     bloomColor: "Blue / purple",
     description: "Genus of evergreen shrubs known for masses of blue flowers in spring; a major pollinator draw. Dozens of California species and cultivars exist, ranging from low groundcovers to large shrubs.",
-    imageUrl: "",
+    imageUrl: "/images/ceanothus.jpg",
     imageAlt: "Ceanothus",
   },
   {
@@ -146,7 +146,7 @@ export const plants: Plant[] = [
     bloomSeason: "Late spring to summer",
     bloomColor: "White",
     description: "Aromatic silvery-leaved shrub, culturally significant to local Indigenous communities. Its thick, wand-like flower stalks can reach several feet tall and draw large numbers of native bees.",
-    imageUrl: "",
+    imageUrl: "/images/white-sage.jpg",
     imageAlt: "White Sage",
   },
   {
@@ -162,7 +162,7 @@ export const plants: Plant[] = [
     bloomSeason: "Fall",
     bloomColor: "Inconspicuous yellow-green",
     description: "Soft, feathery gray-green foliage with a strong sage scent; a foundational coastal sage scrub species. Despite the common name, it's an artemisia, not a true sage (Salvia).",
-    imageUrl: "",
+    imageUrl: "/images/california-sagebrush.jpg",
     imageAlt: "California Sagebrush",
   },
   {
@@ -178,7 +178,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring to summer",
     bloomColor: "White/cream flowers, blue-purple berries",
     description: "Fast-growing large shrub with flat-topped flower clusters and clusters of powdery-blue berries. The berries are a favorite of many bird species, though raw, unripe fruit and other plant parts are toxic.",
-    imageUrl: "",
+    imageUrl: "/images/blue-elderberry.jpg",
     imageAlt: "Blue Elderberry",
   },
   {
@@ -194,7 +194,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring",
     bloomColor: "Red/yellow catkins (inconspicuous)",
     description: "Large deciduous tree with mottled, peeling bark; typically found along streams and washes. It's one of Southern California's largest native trees, providing key riparian shade and habitat.",
-    imageUrl: "",
+    imageUrl: "/images/western-sycamore.jpg",
     imageAlt: "Western Sycamore",
   },
   {
@@ -210,7 +210,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring to summer",
     bloomColor: "Orange",
     description: "Small evergreen shrub with sticky leaves and tubular orange flowers, blooms nearly year-round in mild years. It's a reliable nectar source for hummingbirds and adapts well to a range of garden conditions.",
-    imageUrl: "",
+    imageUrl: "/images/sticky-monkeyflower.jpg",
     imageAlt: "Sticky Monkeyflower",
   },
   {
@@ -226,7 +226,7 @@ export const plants: Plant[] = [
     bloomSeason: "Late summer to fall",
     bloomColor: "Red/orange",
     description: "Spreading perennial with tubular red-orange flowers that bloom late in the season, a key hummingbird plant. It dies back in winter and returns from its roots each year.",
-    imageUrl: "",
+    imageUrl: "/images/california-fuchsia.jpg",
     imageAlt: "California Fuchsia",
   },
   {
@@ -242,7 +242,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring to fall",
     bloomColor: "White/pink",
     description: "Long-blooming subshrub with clusters of small flowers; one of the most valuable native pollinator plants. Flowers shift from white to rust-colored as they age, giving mature plants a two-tone look.",
-    imageUrl: "",
+    imageUrl: "/images/california-buckwheat.jpg",
     imageAlt: "California Buckwheat",
   },
   {
@@ -258,7 +258,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring",
     bloomColor: "Pale blue / lavender",
     description: "Aromatic shrub with whorled flower spikes; a signature scent and sound (bee activity) of coastal sage scrub. It's one of the most drought-tolerant native sages, thriving with little to no summer water.",
-    imageUrl: "",
+    imageUrl: "/images/black-sage.jpg",
     imageAlt: "Black Sage",
   },
   {
@@ -274,7 +274,7 @@ export const plants: Plant[] = [
     bloomSeason: "Winter to spring",
     bloomColor: "Pink/white, urn-shaped",
     description: "Iconic chaparral shrub with smooth mahogany-red bark and clusters of urn-shaped flowers. Its early-season blooms are an important nectar source for native bees before most other chaparral plants flower.",
-    imageUrl: "",
+    imageUrl: "/images/big-berry-manzanita.jpg",
     imageAlt: "Big Berry Manzanita",
   },
   {
@@ -290,7 +290,7 @@ export const plants: Plant[] = [
     bloomSeason: "Early spring (before leaf-out)",
     bloomColor: "Magenta / pink",
     description: "Deciduous small tree covered in bright magenta pea-like flowers in early spring, before leaves emerge. Heart-shaped leaves follow the bloom, turning yellow to red in fall.",
-    imageUrl: "",
+    imageUrl: "/images/western-redbud.jpg",
     imageAlt: "Western Redbud",
   },
   {
@@ -306,7 +306,7 @@ export const plants: Plant[] = [
     bloomSeason: "Summer to fall (seed plumes)",
     bloomColor: "Tan/beige plumes",
     description: "Large, fountain-shaped native bunchgrass; a low-maintenance structural anchor for native gardens. It was traditionally used by local Indigenous communities for basket weaving.",
-    imageUrl: "",
+    imageUrl: "/images/deergrass.jpg",
     imageAlt: "Deergrass",
   },
   {
@@ -322,7 +322,7 @@ export const plants: Plant[] = [
     bloomSeason: "Spring",
     bloomColor: "Magenta / rose",
     description: "Shade-tolerant, spreading sage with fragrant leaves and tall magenta flower spikes favored by hummingbirds. It spreads by rhizomes and makes an effective groundcover under oaks and other trees.",
-    imageUrl: "",
+    imageUrl: "/images/hummingbird-sage.jpg",
     imageAlt: "Hummingbird Sage",
   },
   {
@@ -338,7 +338,7 @@ export const plants: Plant[] = [
     bloomSeason: "Late spring to summer",
     bloomColor: "White/cream",
     description: "Large, glossy-leaved evergreen shrub with folded, taco-shaped leaves; a signature coastal sage scrub species. It's frost-sensitive, so its distribution roughly tracks the coastal areas least prone to hard freezes.",
-    imageUrl: "",
+    imageUrl: "/images/laurel-sumac.jpg",
     imageAlt: "Laurel Sumac",
   },
 ];

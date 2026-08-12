@@ -199,6 +199,16 @@ body {
   aspect-ratio: 16 / 9;
 }
 
+.plant-detail__photo-credit {
+  margin: var(--space-xs) var(--space-lg) 0;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.plant-detail__photo-credit a {
+  color: inherit;
+}
+
 .plant-detail__body {
   padding: var(--space-lg);
 }

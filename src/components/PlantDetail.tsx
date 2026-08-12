@@ -15,6 +15,22 @@ export function PlantDetail({ plant, onClose }: PlantDetailProps) {
           ✕
         </button>
         <PlantImage plant={plant} className="plant-detail__image" />
+        {plant.imageUrl && (
+          <p className="plant-detail__photo-credit">
+            Photo:{" "}
+            <a href="https://calscape.org" target="_blank" rel="noopener noreferrer">
+              Calscape
+            </a>
+            , licensed{" "}
+            <a
+              href="https://creativecommons.org/licenses/by-nc/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CC BY-NC 4.0
+            </a>
+          </p>
+        )}
         <div className="plant-detail__body">
           <h2>{plant.commonName}</h2>
           <p className="plant-detail__latin">{plant.latinName}</p>
