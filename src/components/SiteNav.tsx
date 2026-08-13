@@ -10,6 +10,9 @@ export function SiteNav() {
       <NavLink to="/map" className={({ isActive }) => (isActive ? "site-nav__link site-nav__link--active" : "site-nav__link")}>
         Map
       </NavLink>
+      <NavLink to="/permaculture" className={({ isActive }) => (isActive ? "site-nav__link site-nav__link--active" : "site-nav__link")}>
+        Permaculture
+      </NavLink>
     </nav>
   );
 }

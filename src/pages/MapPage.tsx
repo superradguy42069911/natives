@@ -5,6 +5,7 @@ import { InstallationMap } from "../components/map/InstallationMap";
 import { FilterChips } from "../components/map/FilterChips";
 import { InstallationList } from "../components/map/InstallationList";
 import { InstallationDetail } from "../components/map/InstallationDetail";
+import "../styles/strong-cities-tokens.css";
 import "../styles/map.css";
 
 export function MapPage() {

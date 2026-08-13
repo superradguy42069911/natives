@@ -1,32 +1,7 @@
-/* Design tokens and layout ported from design-reference/prototype-map.html.
-   Everything is scoped under .map-page so it can't leak into the plants pages. */
-.map-page {
-  --primary: #35503a;
-  --primary-dark: #16231a;
-  --primary-mid: #4a6e50;
-  --secondary: #d9782d;
-  --accent: #4b4c7a;
-  --offwhite: #f3f4ee;
-  --text-dark: #271f1a;
-  --text-muted: #5b5347;
-  --text-on-dark: #f5f3ee;
-  --muted-on-dark: #c9bfa9;
-  --border: #e1ddd0;
-
-  font-family: "Public Sans", sans-serif;
-  color: var(--text-dark);
-  background: var(--offwhite);
-  min-height: calc(100vh - 41px);
-  overflow-x: hidden;
-}
-
-.map-page h1,
-.map-page h2,
-.map-page h3,
-.map-page .display {
-  font-family: "Fraunces", serif;
-  font-optical-sizing: auto;
-}
+/* Layout ported from design-reference/prototype-map.html. Color/font tokens
+   live in strong-cities-tokens.css (shared with the permaculture page).
+   Everything here is scoped under .map-page so it can't leak into the
+   plants pages. */
 
 .map-page__header {
   background: var(--primary-dark);
