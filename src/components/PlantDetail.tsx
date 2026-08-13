@@ -49,6 +49,8 @@ export function PlantDetail({ plant, onClose }: PlantDetailProps) {
             <dd>{plant.sunNeeds}</dd>
             <dt>Water needs</dt>
             <dd>{plant.waterNeeds}</dd>
+            <dt>Water zone</dt>
+            <dd className="plant-detail__zone">{plant.waterZone}</dd>
             <dt>Bloom season</dt>
             <dd>{plant.bloomSeason}</dd>
             <dt>Bloom color</dt>

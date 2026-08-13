@@ -2,13 +2,14 @@ import { useMemo, useState } from "react";
 import { plants, type Plant } from "../data/plants";
 import { PlantGrid } from "../components/PlantGrid";
 import { PlantDetail } from "../components/PlantDetail";
-import { FilterBar, type SortKey } from "../components/FilterBar";
+import { FilterBar, type SortKey, type WaterZone } from "../components/FilterBar";
 import "../styles/tokens.css";
 import "../App.css";
 
 export function PlantsPage() {
   const [selectedPlant, setSelectedPlant] = useState<Plant | null>(null);
   const [selectedType, setSelectedType] = useState("all");
+  const [selectedZone, setSelectedZone] = useState<WaterZone | "all">("all");
   const [sortKey, setSortKey] = useState<SortKey>("name");
 
   const types = useMemo(
@@ -21,6 +22,9 @@ export function PlantsPage() {
     if (selectedType !== "all") {
       result = result.filter((p) => p.type === selectedType);
     }
+    if (selectedZone !== "all") {
+      result = result.filter((p) => p.waterZone === selectedZone);
+    }
 
     return [...result].sort((a, b) => {
       if (sortKey === "type") {
@@ -28,7 +32,7 @@ export function PlantsPage() {
       }
       return a.commonName.localeCompare(b.commonName);
     });
-  }, [selectedType, sortKey]);
+  }, [selectedType, selectedZone, sortKey]);
 
   return (
     <div className="app">
@@ -41,6 +45,8 @@ export function PlantsPage() {
         types={types}
         selectedType={selectedType}
         onTypeChange={setSelectedType}
+        selectedZone={selectedZone}
+        onZoneChange={setSelectedZone}
         sortKey={sortKey}
         onSortChange={setSortKey}
       />
