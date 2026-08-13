@@ -23,11 +23,10 @@ function App() {
     }
 
     return [...result].sort((a, b) => {
-      if (sortKey === "name") return a.commonName.localeCompare(b.commonName);
-      if (a.pollinatorScore === null && b.pollinatorScore === null) return 0;
-      if (a.pollinatorScore === null) return 1;
-      if (b.pollinatorScore === null) return -1;
-      return b.pollinatorScore - a.pollinatorScore;
+      if (sortKey === "type") {
+        return a.type.localeCompare(b.type) || a.commonName.localeCompare(b.commonName);
+      }
+      return a.commonName.localeCompare(b.commonName);
     });
   }, [selectedType, sortKey]);
 
