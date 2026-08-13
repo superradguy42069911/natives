@@ -127,7 +127,7 @@ export const plants: Plant[] = [
   },
   {
     id: "ceanothus",
-    commonName: "Ceanothus (California Lilac)",
+    commonName: "California Lilac",
     latinName: "Ceanothus sp.",
     type: "Shrub",
     size: "3-12 ft tall (varies by species)",

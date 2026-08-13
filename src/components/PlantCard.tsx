@@ -14,13 +14,9 @@ export function PlantCard({ plant, onSelect }: PlantCardProps) {
       <div className="plant-card__body">
         <h3 className="plant-card__name">{plant.commonName}</h3>
         <p className="plant-card__latin">{plant.latinName}</p>
-        <p className="plant-card__type">{plant.type}</p>
         <div className="plant-card__scores">
           <ScorePill label="Ease of care" value={plant.easeOfCare ?? "Not yet rated"} />
-          <ScorePill
-            label="Pollinator"
-            value={plant.pollinatorScore === null ? "Not yet rated" : `${plant.pollinatorScore} / 5`}
-          />
+          <ScorePill label="Type" value={plant.type} />
         </div>
       </div>
     </button>

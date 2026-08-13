@@ -104,13 +104,8 @@ body {
   font-size: 0.85rem;
 }
 
-.plant-card__type {
-  margin: 0 0 var(--space-sm);
-  font-size: 0.85rem;
-  color: var(--color-accent);
-}
-
 .plant-card__scores {
+  margin-top: var(--space-sm);
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);

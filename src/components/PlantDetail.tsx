@@ -37,17 +37,12 @@ export function PlantDetail({ plant, onClose }: PlantDetailProps) {
 
           <div className="plant-detail__scores">
             <ScorePill label="Ease of care" value={plant.easeOfCare ?? "Not yet rated"} />
-            <ScorePill
-              label="Pollinator"
-              value={plant.pollinatorScore === null ? "Not yet rated" : `${plant.pollinatorScore} / 5`}
-            />
+            <ScorePill label="Type" value={plant.type} />
           </div>
 
           <p>{plant.description}</p>
 
           <dl className="plant-detail__facts">
-            <dt>Type</dt>
-            <dd>{plant.type}</dd>
             <dt>Size</dt>
             <dd>{plant.size}</dd>
             <dt>Sun needs</dt>
