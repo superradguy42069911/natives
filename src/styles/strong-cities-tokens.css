@@ -1,21 +1,22 @@
-/* Shared Strong Cities LA design tokens (colors, fonts) ported from
-   design-reference/prototype-map.html. Applied to any page under the
-   Strong Cities LA brand (the map, the permaculture guide) via the
-   selector list below - add a new page's root class here rather than
-   redefining these values in that page's own stylesheet. */
+/* Shared Strong Cities LA design tokens (colors, fonts). Palette: "Magenta
+   Pyramid" - chosen 2026-08-12 from a set of reference images (see plan.md
+   Section 13). Applied to any page under the Strong Cities LA brand (the
+   map, the permaculture guide) via the selector list below - add a new
+   page's root class here rather than redefining these values in that
+   page's own stylesheet. */
 .map-page,
 .permaculture-page {
-  --primary: #35503a;
-  --primary-dark: #16231a;
-  --primary-mid: #4a6e50;
-  --secondary: #d9782d;
-  --accent: #4b4c7a;
-  --offwhite: #f3f4ee;
-  --text-dark: #271f1a;
-  --text-muted: #5b5347;
-  --text-on-dark: #f5f3ee;
-  --muted-on-dark: #c9bfa9;
-  --border: #e1ddd0;
+  --primary: #c42b6b;
+  --primary-dark: #4a1530;
+  --primary-mid: #d6467f;
+  --secondary: #f4d35e;
+  --accent: #6fcbdc;
+  --offwhite: #fbefe0;
+  --text-dark: #3a1428;
+  --text-muted: #7a4a5e;
+  --text-on-dark: #fbefe0;
+  --muted-on-dark: #e3a8c0;
+  --border: #e8c8d6;
 
   font-family: "Public Sans", sans-serif;
   color: var(--text-dark);

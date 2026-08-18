@@ -1,12 +1,15 @@
 :root {
-  --color-bg: #faf8f3;
+  /* Palette: "Magenta Pyramid" - chosen 2026-08-12, shared with the Strong
+     Cities LA pages (see strong-cities-tokens.css and plan.md Section 13). */
+  --color-bg: #fbefe0;
   --color-surface: #ffffff;
-  --color-text: #2b2a25;
-  --color-text-muted: #6b6a63;
-  --color-primary: #4c6b3f;
-  --color-primary-dark: #395030;
-  --color-accent: #b5651d;
-  --color-border: #e0ddd3;
+  --color-text: #3a1428;
+  --color-text-muted: #7a4a5e;
+  --color-primary: #c42b6b;
+  --color-primary-mid: #d6467f;
+  --color-primary-dark: #4a1530;
+  --color-accent: #f4d35e;
+  --color-border: #e8c8d6;
 
   --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
 
